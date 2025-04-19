@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LCA Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
+    body {
+      background: linear-gradient(to bottom right, #e8f5e9, #ffffff);
+      color: #333;
+      animation: fadeIn 1s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    header {
+      background: #a5d6a7;
+      padding: 1em 2em;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    nav a {
+      margin: 0 1em;
+      text-decoration: none;
+      color: #2e7d32;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #1b5e20; }
+    section {
+      padding: 2em;
+      min-height: 80vh;
+      animation: slideUp 1s ease-in;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    footer {
+      background: #c8e6c9;
+      text-align: center;
+      padding: 1em;
+    }
+    .hidden { display: none; }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 1em;
+      border-radius: 10px;
+    }
+    form {
+      margin-top: 1em;
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+    }
+    input, textarea {
+      padding: 0.75em;
+      margin: 0.5em 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 0.75em;
+      background-color: #81c784;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #66bb6a;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Life Cycle Assessment Portal</h1>
+    <nav>
+      <a href="#" onclick="showPage('home')">Home</a>
+      <a href="#" onclick="showPage('application')">Application</a>
+      <a href="#" onclick="showPage('contact')">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Welcome to the LCA Portal</h2>
+    <p>Life Cycle Assessment (LCA) helps evaluate the environmental impact of a product or service throughout its entire lifecycle – from raw material extraction to disposal.</p>
+    <ul>
+      <li>Raw Materials</li>
+      <li>Production</li>
+      <li>Usage</li>
+      <li>Disposal</li>
+    </ul>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Life-cycle_assessment_stages.png/640px-Life-cycle_assessment_stages.png" alt="LCA Stages">
+  </section>
+
+  <section id="application" class="hidden">
+    <h2>LCA Applications</h2>
+    <p>LCA is widely used in various fields like:</p>
+    <ul>
+      <li>Product Design and Innovation</li>
+      <li>Environmental Policy Making</li>
+      <li>Packaging and Waste Management</li>
+      <li>Corporate Sustainability Reports</li>
+    </ul>
+    <p><strong>Example:</strong> Comparing the environmental impact of plastic vs. glass bottles.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Plastic_vs_Glass_Impact.png/640px-Plastic_vs_Glass_Impact.png" alt="Plastic vs Glass Comparison">
+  </section>
+
+  <section id="contact" class="hidden">
+    <h2>Contact Us</h2>
+    <p>Name: GreenTech Group</p>
+    <p>Email: info@greentech.com</p>
+    <p>LinkedIn: linkedin.com/in/greentech</p>
+
+    <form>
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Life Cycle Assessment Portal</p>
+  </footer>
+
+  <script>
+    function showPage(page) {
+      const sections = ['home', 'application', 'contact'];
+      sections.forEach(id => {
+        document.getElementById(id).classList.add('hidden');
+      });
+      document.getElementById(page).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
