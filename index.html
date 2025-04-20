@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +7,8 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Roboto', sans-serif; }
     body {
-      background: linear-gradient(to bottom right, #e8f5e9, #ffffff);
+      background: url('https://images.unsplash.com/photo-1523978591478-c753949ff840?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+      background-size: cover;
       color: #333;
       animation: fadeIn 1s ease-in;
     }
@@ -17,7 +17,7 @@
       to { opacity: 1; }
     }
     header {
-      background: #a5d6a7;
+      background: rgba(165, 214, 167, 0.9);
       padding: 1em 2em;
       text-align: center;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -31,7 +31,10 @@
     }
     nav a:hover { color: #1b5e20; }
     section {
+      background-color: rgba(255, 255, 255, 0.9);
       padding: 2em;
+      margin: 2em;
+      border-radius: 10px;
       min-height: 80vh;
       animation: slideUp 1s ease-in;
     }
@@ -40,7 +43,7 @@
       to { transform: translateY(0); opacity: 1; }
     }
     footer {
-      background: #c8e6c9;
+      background: rgba(200, 230, 201, 0.9);
       text-align: center;
       padding: 1em;
     }
@@ -84,9 +87,7 @@
       <a href="#" onclick="showPage('application')">Application</a>
       <a href="#" onclick="showPage('contact')">Contact</a>
     </nav>
-  </header>
-
-  <section id="home">
+  </header>  <section id="home">
     <h2>Welcome to the LCA Portal</h2>
     <p>Life Cycle Assessment (LCA) helps evaluate the environmental impact of a product or service throughout its entire lifecycle – from raw material extraction to disposal.</p>
     <ul>
@@ -95,10 +96,8 @@
       <li>Usage</li>
       <li>Disposal</li>
     </ul>
-    <img src="lca-overview.jpg" alt="LCA Stages">
-  </section>
-
-  <section id="application" class="hidden">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Life-cycle_assessment_stages.png/640px-Life-cycle_assessment_stages.png" alt="LCA Stages">
+  </section>  <section id="application" class="hidden">
     <h2>LCA Applications</h2>
     <p>LCA is widely used in various fields like:</p>
     <ul>
@@ -108,35 +107,28 @@
       <li>Corporate Sustainability Reports</li>
     </ul>
     <p><strong>Example:</strong> Comparing the environmental impact of plastic vs. glass bottles.</p>
-    <img src="lca-applications.png" alt="Plastic vs Glass Comparison">
-  </section>
-
-  <section id="contact" class="hidden">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Plastic_vs_Glass_Impact.png/640px-Plastic_vs_Glass_Impact.png" alt="Plastic vs Glass Comparison">
+  </section>  <section id="contact" class="hidden">
     <h2>Contact Us</h2>
     <p>Company: GreenTech Group</p>
-    <p>Name: Siddesh.H and Tarun.S.Vaidyam</p>
+    <p>Meet : Siddesh.H. and  Tarun.S.Vaidyam</p>
     <p>Email: info@greentech.com</p>
-    <p>LinkedIn: linkedin.com/in/greentech</p>
+    <p>LinkedIn: linkedin.com/in/greentech</p><form>
+  <label for="name">Your Name:</label>
+  <input type="text" id="name" name="name" required>
 
-    <form>
-      <label for="name">Your Name:</label>
-      <input type="text" id="name" name="SIDDESH.H" required>
+  <label for="email">Your Email:</label>
+  <input type="email" id="email" name="email" required>
 
-      <label for="email">Your Email:</label>
-      <input type="email" id="email" name="siddeshaa088@gmail.com" required>
+  <label for="message">Your Message:</label>
+  <textarea id="message" name="message" rows="5" required></textarea>
 
-      <label for="message">Your Message:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
 
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <footer>
+  </section>  <footer>
     <p>&copy; 2025 Life Cycle Assessment Portal</p>
-  </footer>
-
-  <script>
+  </footer>  <script>
     function showPage(page) {
       const sections = ['home', 'application', 'contact'];
       sections.forEach(id => {
@@ -144,6 +136,5 @@
       });
       document.getElementById(page).classList.remove('hidden');
     }
-  </script>
-</body>
+  </script></body>
 </html>
